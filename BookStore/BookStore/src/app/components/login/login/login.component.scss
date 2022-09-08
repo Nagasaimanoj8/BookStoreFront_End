@@ -33,6 +33,7 @@
     align-items:center;
     background: #F5F5F5 0% 0% no-repeat padding-box;
     border-radius: 21px;
+    margin-bottom: 10vh;
 }
     
 
@@ -48,7 +49,7 @@ p{
 
 }
 .part2{
-    height: 70vh;
+    height: 80vh;
     width: 30vw;
     display: flex;
     justify-content: center;
@@ -56,13 +57,12 @@ p{
     background: #FFFFFF 0% 0% no-repeat padding-box;
     box-shadow: 0px 5px 15px #00000029;
     border-radius: 20px;
+    margin-bottom: 10vh;
 }
 .part2-1{
     height: 100%;
     width: 70%;
-    .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
-        color: rgb(119, 5, 5);
-      }
+    
     
 }
 .part2-1-1{
@@ -71,6 +71,15 @@ p{
     justify-content: space-between;
     align-items: center;
 }
+.email{
+    height: 5vh;
+ 
+}
+.password{
+    height:5vh;
+}
+
+
 .example-button-row {
     display: table-cell;
     width: 490px;
@@ -125,7 +134,7 @@ h5{
         color: #9D9D9D;
         opacity: 1; 
         margin-left: 140px;
-        margin-top: -16px;
+        margin-top: 6px;
 
     }
 .heading5{
@@ -191,11 +200,35 @@ margin-top: 15px;
 }
 
 ::ng-deep .mat-form-field-appearance-outline#specific-border .mat-form-field-outline  {
-    color: #A03037;
+    
     border-radius: 5px;
     border: #F5F5F5 !important ;
 }
 
-.mat-focused .mat-icon {
-    color: red;
-}
+
+@media screen and (max-width: 1000px) {
+    .part1,.part2,.head{
+        width: 100%;
+        margin-left: 0;
+        margin-top: 10vh;
+    }
+    .button1,.button{
+        width: 100%;
+    }
+    .button2-1,.button2{
+        width: 80%;
+    }
+    h5,h6{
+        margin-left: 10px;
+        font-size: small;
+    }
+    h2{
+        margin-left: 10px;
+    }
+    .part2-1-1{
+        margin-right: 25%;
+    }
+    p{
+        font-size:10px;
+    }
+  }

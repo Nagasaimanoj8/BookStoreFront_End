@@ -7,7 +7,9 @@ import {FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import {MatCardModule} from '@angular/material/card';
 
-
+import {NgxPaginationModule} from 'ngx-pagination';
+import {MatSelectModule} from '@angular/material/select';
+import {MatMenuModule} from '@angular/material/menu';
 import {MatBadgeModule} from '@angular/material/badge';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { AppRoutingModule } from './app-routing.module';
@@ -42,7 +44,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     ReactiveFormsModule,MatFormFieldModule,
     MatInputModule,FlexLayoutModule,MatButtonModule,
     MatIconModule,MatSidenavModule,MatToolbarModule,MatListModule,MatCheckboxModule,
-    MatBadgeModule
+    MatBadgeModule,MatMenuModule,MatSelectModule,NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

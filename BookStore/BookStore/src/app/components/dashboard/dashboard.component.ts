@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { DataserviceService } from 'src/app/services/dataservice/dataservice.service'
 
 @Component({
   selector: 'app-dashboard',
@@ -6,20 +8,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-  cart_details:any;
-  message:any;
-  search_text:string=''
-  data: any;
-  constructor() { }
+
+  constructor(private data: DataserviceService,private router: Router) { }
 
   ngOnInit(): void {
-    this.data.currentSearch.subscribe((message: any)=>this.message=message)
-    this.data.currentCount.subscribe((count: any)=>this.cart_details=count)
-    console.log(this.cart_details)
+  
   }
-  onKeyUp(event:any){
-    this.search_text = event.target.value
-    this.data.changeSearch(this.search_text)
+  search($event:any){
+    console.log($event.target.value)
+    this.data.outgoingData($event.target.value)
+  }
+  signOut() {
+    localStorage.removeItem("token");
+    this.router.navigateByUrl('/login');
   }
 
 }

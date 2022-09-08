@@ -15,10 +15,12 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit(): void {
     this.registerForm = this.formBuilder.group({
-      'fullname': ['', Validators.required],
+      'firstname': ['', Validators.required],
+      'lastname': ['', Validators.required],
       'email': ['', Validators.required],
       'Password': ['', [Validators.required, Validators.minLength(8)]],
       'phoneNo': ['', [Validators.required, Validators.maxLength(10)]],
+      'role':['',[Validators.required,Validators.maxLength(10)]]
 
     })
   }
@@ -27,8 +29,10 @@ export class RegisterComponent implements OnInit {
       if (this.registerForm.valid) {
         console.log("valid data", this.registerForm.value);
         let data = {
-          first_name: this.registerForm.value.fullname,
-          email: this.registerForm.value.email,
+          first_name: this.registerForm.value.firstname,
+          last_name: this.registerForm.value.firstname,
+          role:this.registerForm.value.role,
+           email: this.registerForm.value.email,
           password: this.registerForm.value.Password,
           phone_no: this.registerForm.value.phoneNo,
         }

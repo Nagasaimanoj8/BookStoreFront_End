@@ -1,10 +1,17 @@
 <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" > 
     <div class="part2-1-1">
       <div id="font-size">
-        <h2>Full Name</h2>
+        <h2>First Name</h2>
         <mat-form-field class="button1" appearance="outline">
-          <input class="button-size" matInput placeholder="" formControlName="fullname" class="fullname">
-          <mat-error>Enter FullName</mat-error>
+          <input class="button-size" matInput placeholder="" formControlName="firstname" class="fullname">
+          <mat-error>Enter FirstName</mat-error>
+        </mat-form-field>
+      </div>
+      <div id="font-size">
+        <h2>Last Name</h2>
+        <mat-form-field class="button1" appearance="outline">
+          <input class="button-size" matInput placeholder="" formControlName="lastname" class="fullname">
+          <mat-error>Enter FirstName</mat-error>
         </mat-form-field>
       </div>
       <div id="font-size">
@@ -26,6 +33,13 @@
         <mat-form-field class="button1" appearance="outline" >
           <input matInput placeholder="" formControlName="phoneNo" class="phone">
           <mat-error>Enter PhoneNo</mat-error>
+        </mat-form-field>
+      </div>
+      <div id="font-size">
+        <h1>Role</h1>
+        <mat-form-field class="button1" appearance="outline" >
+          <input matInput placeholder="" formControlName="role" class="phone">
+          <mat-error>Enter Role Name:Either Admin/User</mat-error>
         </mat-form-field>
       </div>
     

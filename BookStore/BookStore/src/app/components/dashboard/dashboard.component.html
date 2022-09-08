@@ -1,33 +1,42 @@
-<div class="main">
-    <div class="navbar" fxLayout="row" fxLayoutAlign="center center">
-        <div class="navbar-elements" fxLayout="row" fxLayoutAlign="space-between center">
-            <div class="heading" fxLayout="row" fxLayoutAlign="center center">
-                <img src="../../assets/education.svg">
-                <h2 id="heading-h2">Bookstore</h2>
-            </div>
-            <div class="input-bar" fxLayout="row" fxLayoutAlign="center center">
-                <div class="logo-search">
-                    <img src="../../assets/search.svg">
-                </div>
-                <input id="input-bar" placeholder="Search" (keyup)="onKeyUp($event)">
-            </div>
-            <div fxLayout="row">
-                <div class="account-icon" fxLayout="column" fxLayoutAlign="center center">
-                    <img id="cart-image" src="../../assets/person.svg" alt="">
-                    <p routerLink="/dashboard/profile">Profile</p>
-                </div>
-                <div class="cart-icon" fxLayout="column" fxLayoutAlign="center center" matBadge ={{cart_details.length}} matBadgeColor="warn" matBadgeOverlap="false"  matBadgePosition="after" >
-                    <div ><img id="cart-image"  src="../../assets/shopping_cart.svg" alt=""></div>
-                    <p routerLink="/dashboard/cart">Cart</p>
-                </div>
-            </div>
+<div class="container">
+    <mat-toolbar class="tool" fxLayout="row" fxLayoutAlign="space-between center">
+        <div class="titleText" fxLayout="row" fxFlex.xs="5px">
+            <img src="../../../assets/education.svg" class="img-Icon" />
+            <a id="text">BookStore</a>
         </div>
-    </div>
-    <div  fxLayot="column" fxLayoutAlign="center center">
-        <div class="books">
-            <router-outlet></router-outlet>
+
+        <mat-card class="search" fxLayout="row" fxLayoutAlign="space-between center">
+            <button mat-icon-button>
+                <mat-icon class="searchIcon">search</mat-icon>
+            </button>
+            <input class="searchInput" type="text" name="search" placeholder="Search.." (keyup)="search($event)"/>
+        </mat-card>
+
+        <button class="Profile" mat-button [matMenuTriggerFor]="menu">Manoj <mat-icon class="searchIcon">perm_identity
+            </mat-icon>
+
+            <mat-menu class="matmenu" #menu="matMenu">
+                <div fxLayout="column" fxLayoutGap="3px" style="width: 200px;">
+                    <h3 class="greet">Hii Deepak,</h3>
+                </div>
+
+
+                <button class="wishlistbutton" routerLink="./wishlist" mat-menu-item fxLayoutAlign.sm="end center">
+                    <mat-icon class="wishlistIcon" >favorite</mat-icon>MY WISHLIST
+                </button>
+
+                <div style="margin-top: 10px;" mat-menu-item fxLayoutGap="0px">
+                    <button (click)="signOut()" class="logoutbutton">Logout</button>
+                </div>
+            </mat-menu>
+        </button>
+
+        <div fxLayout="row" fxLayoutAlign.sm="end center">
+            <button class="cart" mat-button routerLink="./cart">Cart<mat-icon>shopping_cart</mat-icon></button>
         </div>
+
+    </mat-toolbar>
+    <div>
+        <router-outlet></router-outlet>
     </div>
-    
-    
 </div>
