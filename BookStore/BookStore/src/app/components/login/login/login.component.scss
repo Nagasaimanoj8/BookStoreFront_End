@@ -1,0 +1,201 @@
+.head{
+    background-color: #beb7b7;
+    height:100vh;
+    width:100vw;
+    border:6px solid #beb7b7;
+    margin:-1vw;
+    margin:-2vh;
+}
+
+.main{
+    height: 68vh;
+    width: 50vw;
+    margin-left: 25% ;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin-top: 10%;
+}
+.part1{   
+    height: 50vh;
+    width: 25vw;
+    margin-top:2% ;
+    img{
+    height: 60%;
+    width: 70%;
+    margin-top: 50px;
+    background: #F5F5F5 0% 0% no-repeat padding-box;
+    border-radius: 200px;
+    }
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    background: #F5F5F5 0% 0% no-repeat padding-box;
+    border-radius: 21px;
+}
+    
+
+p{
+    text-align: left;
+    font-size:20px;
+    font-weight: 600;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 0px;
+    color: #0A0102;
+    text-transform: uppercase;
+    opacity: 1;
+
+}
+.part2{
+    height: 70vh;
+    width: 30vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 5px 15px #00000029;
+    border-radius: 20px;
+}
+.part2-1{
+    height: 100%;
+    width: 70%;
+    .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+        color: rgb(119, 5, 5);
+      }
+    
+}
+.part2-1-1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.example-button-row {
+    display: table-cell;
+    width: 490px;
+}
+  
+.example-button-row .mat-button-base {
+    margin: 8px 8px 8px 0;
+
+}
+
+h1{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size:25px;
+    font-weight:medium;
+    color:#0A0102;
+
+}
+
+h2{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size:25px;
+    font-weight:medium;
+    color:#0A0102;
+
+}
+h3{
+    font-size: 15px;
+    text-align: left;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 0px;
+    color: #0A0102;
+    text-transform: capitalize;
+    opacity: 1;
+    // margin-top: 8px;
+    margin-bottom: 2px;
+ }
+h4{ 
+    font-size: 15px;
+    text-align: left;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 0px;
+    color: #0A0102;
+    text-transform: capitalize;
+    opacity: 1;
+    margin-bottom: 2px;
+
+ }
+
+h5{
+        text-align: left;
+        letter-spacing: 0px;
+        color: #9D9D9D;
+        opacity: 1; 
+        margin-left: 140px;
+        margin-top: -16px;
+
+    }
+.heading5{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 99%;
+    
+}
+
+.example-button-row {
+    display: table-cell;
+    width: 800px;
+    
+}
+  
+.example-button-row .mat-button-base {
+    margin: 8px 8px 8px 0;
+}
+
+h6{
+
+top: 461px;
+left: 840px;
+text-align:left ;
+font: normal normal bold 14px/18px Meiryo UI;
+letter-spacing: 0px;
+color: #343434;
+text-transform: uppercase;
+opacity: 1;
+margin-left: 40px;
+margin-top: 15px;
+}
+
+.bottom{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 7px;
+    margin-top: 10px;
+
+}
+
+.button{
+    width:236px; 
+    background-color:#A03037;
+}
+.button1{
+    width:235px;
+}
+.button2{
+    width:114px;
+    background-color: blue;
+    
+}
+.button2-1{
+    width:114px;
+    background-color:#79777727;
+    
+}
+
+#font-size{
+    font-size:12px ;
+}
+
+::ng-deep .mat-form-field-appearance-outline#specific-border .mat-form-field-outline  {
+    color: #A03037;
+    border-radius: 5px;
+    border: #F5F5F5 !important ;
+}
+
+.mat-focused .mat-icon {
+    color: red;
+}
