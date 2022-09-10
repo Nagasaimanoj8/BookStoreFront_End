@@ -26,6 +26,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatListModule} from '@angular/material/list';
 import { GetallbooksComponent } from './components/getallbooks/getallbooks.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { BookviewComponent } from './components/bookview/bookview.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     RegisterComponent,
     LoginComponent,
     GetallbooksComponent,
-    DashboardComponent
+    DashboardComponent,
+    BookviewComponent
   ],
   imports: [
     BrowserModule,

@@ -28,9 +28,9 @@ export class GetallbooksComponent implements OnInit {
   getAllBook() {
     this.bookservice.getallbooks().subscribe((response: any) => {
       console.log(response);
-      this.booksquantity = response.books.length;
-      this .totalLength=  response.books.length;
-      this.booksArray = response.books;
+      this.booksquantity = response.length;
+      this .totalLength=  response.length;
+      this.booksArray = response;
       console.log(this.booksArray);
     });
   }
@@ -47,11 +47,11 @@ export class GetallbooksComponent implements OnInit {
   bookview(Book: any) {
 
     localStorage.setItem('bookId', Book.id);
-    this.router.navigateByUrl('/dashboard/bookview/' + Book.id)
+    this.router.navigateByUrl('/dashboard/getallbooks/' + Book.id)
 
   }
-  AddToBag(Book: any) {
-    this.bookservice.addToBag(Book.id).subscribe((response: any) => {
+  AddToBag(book: any) {
+    this.bookservice.addToBag(book.id).subscribe((response: any) => {
       console.log('book add to Bag ', response)
       // this.snackbar.open('Added to cart ', '', {
       //   duration: 2000,
