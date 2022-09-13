@@ -7,7 +7,7 @@
     margin-top: -22px;
     margin-left: 5%;
     font-size: medium;
-    color: gainsboro;
+    // color: gainsboro;
 }
 .books {
     font-size: 25px;
@@ -17,7 +17,7 @@
 .sort {
     margin-top: -24px;
     margin-left: 61%;
-    border-radius: none;
+  
     outline: none;
 }
 
@@ -44,26 +44,34 @@
 }
 
 .entirebook {
-    border: 1px solid gainsboro;
+    // border: 1px solid gainsboro;
     width: 250px;
     height: fit-content;
     margin: 20px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    box-shadow: rgba(233, 11, 11, 0.24) 0px 3px 8px;
 }
 
 .bookimg {
-    width: 30vw;
-    height: 40vh;
-    background-color: gainsboro;
-    margin-top: -1px;
+    width: 16vw;
+    height: 60vh;
+    border: 1px solid gainsboro;
+    display: flex;
+    flex-direction: column;
+  
+    margin: 20px 10px 10px 10px;
+    
 }
 
 .img1 {
     width: 110px;
     height: 140px;
-    margin-left: 70px;
-    margin-top: 35px;
+    margin-left: 0px;
+    margin-top: 1px;
     cursor: pointer;
+    border-top:30px solid gainsboro ;
+    border-bottom: 20px solid gainsboro;
+    border-right: 50px solid gainsboro;
+    border-left: 60px solid gainsboro;
 }
 
 .title {
@@ -72,9 +80,9 @@
 }
 
 #para {
-    margin-top: -24px;
+    
     font-size: small;
-    color: gray;
+  
     margin-left: 14px;
 }
 
@@ -99,10 +107,10 @@
 
 
 #count {
-    margin-top: -8%;
-    margin-left: 19%;
+    margin-top: -17px;
+    margin-left:-14vw;
     font-size: small;
-    color: gainsboro;
+    // color: gainsboro;
 }
 
 .dicounted-price {
@@ -114,7 +122,7 @@
 .actual-price {
     margin-left: 13px;
     text-decoration: line-through;
-    color: gray;
+    // color: gray;
 }
 
 .add-btn {
@@ -133,8 +141,8 @@
 
 .btn2 {
     background-color:black;
-    color: white;
-    border: aliceblue;
+    color: rgb(19, 18, 18);
+    // border: aliceblue;
     // border-radius: 10px;
     // padding: 2px;
     margin-left: 2%;
@@ -144,7 +152,7 @@
     font-stretch: condensed;
     font-size: small;
     #fav-icons {
-        color: white;
+        color: rgb(224, 17, 17);
         font-size: 100%;
         margin-top: 2px;
         
@@ -181,8 +189,7 @@
     width: 150px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
      margin-top: 17px;
-    border-radius: 2px;
-    // z-index: 1;
+
   }
   
   .dropdown:hover .dropdown-content {
@@ -192,7 +199,7 @@
 #sort{
     border: 1px solid rgba(0, 0, 0, 0.148);
     width: 20vw;
-    border-radius: 20px;
+    padding: 0px 0px 0px 10px;
     margin: -16px;
 }
 

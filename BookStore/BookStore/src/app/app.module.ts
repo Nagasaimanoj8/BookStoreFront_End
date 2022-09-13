@@ -27,6 +27,10 @@ import {MatListModule} from '@angular/material/list';
 import { GetallbooksComponent } from './components/getallbooks/getallbooks.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { BookviewComponent } from './components/bookview/bookview.component';
+import { CartComponent } from './components/cart/cart.component';
+import {MatExpansionModule} from '@angular/material/expansion';
+import { OrderComponent } from './components/order/order.component';
+import { WishlistComponent } from './components/wishlist/wishlist.component';
 
 
 @NgModule({
@@ -36,7 +40,10 @@ import { BookviewComponent } from './components/bookview/bookview.component';
     LoginComponent,
     GetallbooksComponent,
     DashboardComponent,
-    BookviewComponent
+    BookviewComponent,
+    CartComponent,
+    OrderComponent,
+    WishlistComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +53,7 @@ import { BookviewComponent } from './components/bookview/bookview.component';
     ReactiveFormsModule,MatFormFieldModule,
     MatInputModule,FlexLayoutModule,MatButtonModule,
     MatIconModule,MatSidenavModule,MatToolbarModule,MatListModule,MatCheckboxModule,
-    MatBadgeModule,MatMenuModule,MatSelectModule,NgxPaginationModule
+    MatBadgeModule,MatMenuModule,MatSelectModule,NgxPaginationModule,MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent]

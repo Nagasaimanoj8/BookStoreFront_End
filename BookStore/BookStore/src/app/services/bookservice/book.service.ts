@@ -84,68 +84,68 @@ export class BookService {
   }
 
 
-  //  order(data: any) {
-  //   this.token = localStorage.getItem('token');
-  //   let options = {
-  //     headers: new HttpHeaders({
-  //       'Authorization': 'Bearer ' + this.token,
-  //       'Content-Type': 'application/json'
-  //     })
-  //   }
-  //   return this.httpService.postService('/placeorder',data,true, options);
-  // }
+   order(data: any) {
+    this.token = localStorage.getItem('token');
+    let options = {
+      headers: new HttpHeaders({
+        'Authorization': 'Bearer ' + this.token,
+        'Content-Type': 'application/json'
+      })
+    }
+    return this.httpService.postservice('http://127.0.0.1:8000/api/placeOrder',data,true, options);
+  }
 
 
 
-
- 
-  // removecartitem(id: any) {
-  //   this.token = localStorage.getItem('token');
-  //   console.log(id)
-  //   let header = {
-  //     header: new HttpHeaders({
-  //       'Content-Type': 'application/json',
-  //       'Authorization': 'Bearer ' + this.token
-  //       // 'x-access-token':  'Bearer ' + this.token
-  //     }),
-  //     body: { id: id }
-  //   }
-  //   return this.httpService.deleteservice("/deleteBookByCartId", true, header)
-  // }
-
-
-  // removewishlist(reqdata: any) {
-  //   console.log(reqdata);
-  //   let header = {
-  //     headers: new HttpHeaders({
-  //       'Content-Type': 'application/json',
-  //       'Authorization' : 'Bearer '+ this.token,
-  //     }),
-  //   };
-  //   console.log("Deleted wishlist",reqdata)
-  //   return this.httpService.deleteservice( '/deleteBookByWishlistId',  true,header );
-  // }
+   
+  removecartitem(id: any) {
+    this.token = localStorage.getItem('token');
+    console.log(id)
+    let header = {
+      header: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + this.token
+        // 'x-access-token':  'Bearer ' + this.token
+      }),
+      body: { id: id }
+    }
+    return this.httpService.postservice("/http://127.0.0.1:8000/api/deleteBookFromCart",{id}, true, header)
+  }
 
 
+  removewishlist(data: any) {
+    console.log(data);
+    let header = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Authorization' : 'Bearer '+ this.token,
+      }),
+    };
+    console.log("Deleted wishlist",data)
+    return this.httpService.postservice( 'http://127.0.0.1:8000/api/deleteBookFromWishlists', data, true,header );
+  }
 
-  // order(reqData: any) {
-  //   console.log(reqData)
-  //   let headers = {
-  //     address_id: reqData.orders.address_id,
-  //     name: reqData.orders.name,
-  //     quantity: reqData.orders.quantity
-  //   }
+
+
+//   order(reqData: any) {
+//     console.log(reqData)
+//     let headers = {
+//       address_id: reqData.orders.address_id,
+//       name: reqData.orders.name,
+//       quantity: reqData.orders.quantity
+//     }
     
-  //   //   console.log(this.user);
-  //   this.getToken();
-  //   return this.httpService.postservice('/placeorder', headers, true, this.header);
-  // }
+//     //   console.log(this.user);
+//     this.getToken();
+//     return this.httpService.postservice('/placeorder', headers, true, this.header);
+//   }
 
 
 
-  // getToken() {
-  //   this.header = {
-  //     headers: { Authorization: "Bearer " + this.user }
-  //   }
-  // }
+//   getToken() {
+//     this.header = {
+//       headers: { Authorization: "Bearer " + this.user }
+//     }
+//   }
 }
+

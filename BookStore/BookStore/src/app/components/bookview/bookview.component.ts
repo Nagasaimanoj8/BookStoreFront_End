@@ -19,19 +19,10 @@ export class BookviewComponent implements OnInit {
     this.getUserAllBook();
   }
   getUserAllBook() {
-    this.bookservice.getallbooks().subscribe((res: any) => {
-      res.booksArray.forEach((element: any) => {
-        if (element.id == this.bookid) {
-          this.Book = element;
-        }
-      });
-    })
+    
   }
 
-  AddToBag(book: any) {
-    this.bookservice.addToBag(book.id).subscribe((response: any) => {
-      console.log('book add to Bag ', response)
-      this.router.navigateByUrl('/cart')
-    })
+  AddToBag(Book:any){
+    
   }
 }

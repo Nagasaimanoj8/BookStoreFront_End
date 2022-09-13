@@ -46,8 +46,8 @@ export class GetallbooksComponent implements OnInit {
   }
   bookview(Book: any) {
 
-    localStorage.setItem('bookId', Book.id);
-    this.router.navigateByUrl('/dashboard/getallbooks/' + Book.id)
+     localStorage.setItem('BookId', Book.id);
+     this.router.navigateByUrl('/dashboard/bookview')
 
   }
   AddToBag(book: any) {
@@ -56,7 +56,7 @@ export class GetallbooksComponent implements OnInit {
       // this.snackbar.open('Added to cart ', '', {
       //   duration: 2000,
       // });
-      this.router.navigateByUrl('/cart')
+      this.router.navigateByUrl('/bookview')
     })
   }
 

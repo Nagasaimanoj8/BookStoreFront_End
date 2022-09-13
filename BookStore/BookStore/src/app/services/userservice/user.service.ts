@@ -6,6 +6,7 @@ import { HttpService } from '../httpservice/http.service';
   providedIn: 'root'
 })
 export class UserService {
+  token: any;
 
   constructor(private http:HttpService) { }
   register(data:any){
@@ -25,5 +26,16 @@ export class UserService {
     }
     return this.http.postservice('http://127.0.0.1:8000/api/login',data,false,header)
 
+  }
+  AddressService(data: any) {
+    console.log(data);
+    this.token = localStorage.getItem("token")
+    let header = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + this.token,
+      }),
+    };
+    return this.http.postservice('http://127.0.0.1:8000/api/addAddress', data, true, header);
   }
 }
